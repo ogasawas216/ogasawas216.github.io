@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  background-color: #1c2024;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Courier Prime", monospace;
+  font-size: 14px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main section {
+  border-top: 1px solid #2f363d;
+  padding: 10px 0 20px;
+}
+
+/* Header */
+.header {
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  margin: 15px 0;
+}
+
+/* ハンバーガーメニューアイコン */
+.nav-drawer-icon {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  margin: 15px;
+}
+
+.nav-unshown {
+  display: none;
+}
+
+/* サイドメニューの中身 */
+.nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 50%;
+  height: 100%;
+  background: #1c2024;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);
+}
+
+/* サイドメニューの左半分 */
+.nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0; /* 全体に広がるように */
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* メニューリスト */
+.nav-list {
+  margin: 50px auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-list-item {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+.nav-list-item a {
+  text-decoration: none;
+}
+
+/* menu-color */
+.purple {
+  color: #8873b6;
+}
+
+.blue {
+  color: #6ba3e1;
+}
+
+.green {
+  color: #69b57d;
+}
+
+.orange {
+  color: #ffab70;
+}
+
+.red {
+  color: #e16b78;
+}
+
+/* チェックONで表示 */
+#nav-input:checked ~ .nav-close {
+  display: block; /* カバーを表示 */
+  opacity: 0.5;
+}
+
+/* チェックONで表示 */
+#nav-input:checked ~ .nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+/* SNS */
+.sns-container {
+  border-top: 1px solid #2f363d;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px 0;
+}
+.sns-item {
+  margin: 0 10px;
+}
+
+.sns-icon {
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  color: #404244;
+  vertical-align: middle;
+}
+
+/* Section */
+.section-title {
+  font-size: 18px;
+  margin-top: 14.5px;
+}
+
+/* About me */
+.section p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.content {
+  padding: 0 30px;
+}
+
+/* Web Skills */
+.skill-contaier {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-item {
+  margin: 0 20px 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.skill-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Portfolio */
+.portfolio {
+  margin: 10px auto;
+  width: 300px;
+  height: 100px;
+  border: 1px solid #404244;
+  font-size: 8px;
+  line-height: 100px;
+}
+
+/* Contact */
+.email {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #404244;
+}
+
+@media screen and (min-width: 480px) {
+  .nav-open {
+    display: none;
+  }
+
+  .nav-content {
+    margin: 15px 0;
+    height: 1rem;
+    width: 520px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: visible;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  .nav-list {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+  }
+
+  .nav-list-item {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+}
